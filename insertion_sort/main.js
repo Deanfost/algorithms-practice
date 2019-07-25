@@ -9,7 +9,7 @@ insertionSort(list1)
 console.log("Sorted list: " + list1);
 
 /**
- * Insertion Sort (ascending). Sorting like playing cards. O(N^2) average time complexity.
+ * Insertion Sort (ascending). Sorting like playing cards. O(n^2) average time complexity.
  * https://www.geeksforgeeks.org/insertion-sort/
  * @param {number[]} list 
  */

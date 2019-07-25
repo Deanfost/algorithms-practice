@@ -9,7 +9,7 @@ selectionSort(list2)
 console.log("Sorted list: " + list2);
 
 /**
- * Selection Sort (ascending). Like Insertion Sort but sort of backwards. O(N^2) average time complexity.
+ * Selection Sort (ascending). Like Insertion Sort but sort of backwards. O(n^2) average time complexity.
  * https://www.geeksforgeeks.org/selection-sort/
  * @param {number[]} list 
  */

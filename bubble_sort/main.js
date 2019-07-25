@@ -9,7 +9,7 @@ bubbleSort(list3)
 console.log("Sorted list: " + list3);
 
 /**
- * Bubble Sort (ascending). Simplest sorting algorithm. O(N^2) average time complexity.
+ * Bubble Sort (ascending). Simplest sorting algorithm. O(n^2) average time complexity.
  * https://www.geeksforgeeks.org/bubble-sort/
  * @param {number[]} list 
  */
