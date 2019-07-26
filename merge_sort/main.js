@@ -11,6 +11,7 @@ console.log("Sorted list: " + mergeSort(list1));
  * Merge Sort (ascending). Divide and conquer. O(nlog(n)) average time complexity.
  * https://www.geeksforgeeks.org/merge-sort/
  * @param {number[]} list 
+ * @returns {number[]}
  */
 function mergeSort(list) {
     if (list.length == 1) {
