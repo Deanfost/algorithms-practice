@@ -6,9 +6,9 @@ var list3 = list2.slice().reverse();
 var list4 = [40, 60, 100, 10, 60];
 var list5 = [40, 60, 10, 100];
 
-console.log("Original list: " + list5);
-sort(list5);
-console.log("Sorted list: " + list5);
+console.log("Original list: " + list1);
+sort(list1);
+console.log("Sorted list: " + list1);
 
 /**
  * Driver function for Quick Sort.
@@ -40,20 +40,15 @@ function quickSort(list, start, end) {
  */
 function partition(list, start, end) {
     var pivot = list[end];
-    var largerLeft = start;
-    var smallerRight = end - 1;
-    while (largerLeft < smallerRight ) {
-        while (list[largerLeft] <= pivot && largerLeft < end) {
-            largerLeft++;
+    var smallerLeft = start - 1;
+    for (var i = start; i < end; i++) {
+        if (list[i] <= pivot) {
+            smallerLeft++;
+            swap(list, i, smallerLeft);
         }
-        while (list[smallerRight] > pivot && smallerRight >= 0) {
-            smallerRight--;
-        }
-        if (largerLeft < smallerRight)
-            swap(list, largerLeft, smallerRight);
     }
-    swap(list, end, largerLeft);
-    return largerLeft;
+    swap(list, smallerLeft + 1, end);
+    return smallerLeft + 1;
 }
 
 /**
