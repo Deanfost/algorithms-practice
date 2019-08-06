@@ -2,13 +2,31 @@ const list1 = [345, 6, 2, 56, 2, 87, 8, 6, 7, 60]
 const list2 = [1, 2, 3, 4, 5, 7, 8, 10];
 const list3 = list2.slice().reverse();
 const list4 = [.1, .5, .4, .2, .6, .7, .9, .8, .3, 0];
-const list5 = [.1, .2, .3, .4, .5, .6, .7, .8, .9, 1];
+const list5 = [.1, .2, .3, .4, .5, .6, .7, .8, .9];
 const list6 = list5.slice().reverse();
 
-const result = {
+const Result = {
     PASS: true, 
     FAIL: false
 };
+
+/**
+ * Tests if the given input is sorted, prints and returns the result.
+ * @param {string} testKey
+ * @param {number[]} list 
+ * @returns {Result}
+ */
+function testResult(testKey, list) {
+    let result;
+    if (testAscending(list)) {
+        result = Result.PASS;
+        console.log(testKey + ": PASSED ✓");
+    } else {
+        result = Result.FAIL;
+        console.log(testKey + ": FAILED ✗");
+    }
+    return result;
+}
 
 /**
  * Tests if the given list is sorted in ascending order.
@@ -27,27 +45,25 @@ function testAscending(list) {
 }
 
 /**
- * Calculates the percentage of tests passed.
- * @param {{string:{string:boolean}}} results 
+ * Returns a new list with random numbers between a certain range of length 100.
+ * @param {number} absoluteRange
+ * @returns {number[]} 
  */
-function calcPercentage(results) {
-    let testCount = 0;
-    let passCount = 0;
-    for (let resultKey in results) {
-        for (let testKey in results[resultKey]) {
-            testCount++;
-            if (results[resultKey][testKey] == result.PASS) {
-                passCount++;
-            }
-        }
+function getRandomList(absoluteRange) {
+    let list = [];
+    let n = 100;
+    while (n > 0) {
+        let sign = Math.round(Math.random()) == 0 ? 1 : -1;
+        list.push(Math.floor(Math.random() * absoluteRange) * sign);
+        n--;
     }
-    return (passCount / testCount) * 100;
+    return list;
 }
 
 module.exports = {
-    testAscending: testAscending, 
+    testResult: testResult, 
     list1: list1, list2: list2, 
     list3: list3, list4: list4, 
     list5: list5, list6: list6, 
-    result: result, calcPercentage: calcPercentage
+    Result: Result, getRandomList: getRandomList
 };

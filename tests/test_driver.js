@@ -8,21 +8,33 @@ const testTools = require("./tools.js");
 const tests = {
     "Bubble Sort": require("./sorting_algorithms/bubble_sort_tests.js"), 
     "Insertion Sort": require("./sorting_algorithms/insertion_sort_tests.js"), 
-    "Selection Sort": require("./sorting_algorithms/selection_sort_tests.js")
+    "Selection Sort": require("./sorting_algorithms/selection_sort_tests.js"), 
+    "Bucket Sort": require("./sorting_algorithms/bucket_sort_tests.js")
 };
-let results = {};
 
 // Evaluate tests
+let results = {};
 console.log("Starting test suite...\n");
-for (let testKey in tests) {
-    console.log("---------- " + testKey + " ----------");
+for (let algoTestKey in tests) {
+    console.log("---------- " + algoTestKey + " ----------");
     console.log("");
-    results[testKey] = tests[testKey].runTests();
+    results[algoTestKey] = tests[algoTestKey].runTests();
     console.log("");
 }
-console.log("----------");
+console.log("----------\n");
 
-// Show overall results
-console.log();
-console.log("Project grade: " + Math.round(testTools.calcPercentage(results) * 100) / 100 + "%");
+// Show any failed tests, print out overall grade
+for (let algorithmKey in results) {
+    let currAlgo = results[algorithmKey];
+    for (let testKey in currAlgo) {
+        let currTest = currAlgo[testKey];
+        if (currTest.grade == testTools.Result.FAIL) {
+            console.log(algorithmKey + "/" + testKey + ": ");
+            console.log("Input: " + currTest.input);
+            console.log("Output: " + currTest.output);
+            console.log();
+        }
+    }
+}
+
 console.log("All tasks finished.");
