@@ -23,7 +23,7 @@ for (let algoTestKey in tests) {
 }
 console.log("----------\n");
 
-// Show any failed tests, print out overall grade
+// Show any failed tests
 for (let algorithmKey in results) {
     let currAlgo = results[algorithmKey];
     for (let testKey in currAlgo) {

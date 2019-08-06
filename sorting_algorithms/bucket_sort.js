@@ -5,7 +5,7 @@ const insertionSort = require("../sorting_algorithms/insertion_sort");
 /**
  * Bucket Sort (ascending). Efficient sorting of a uniform distribution. O(n) average time complexity.
  * https://www.geeksforgeeks.org/bucket-sort-2/
- * Note: Only works on values between 0 and 1.
+ * Note: Only works on values in the range (0, 1).
  * @param {number[]} list 
  * @returns {number[]}
  */
@@ -27,7 +27,7 @@ function bucketSort(list) {
 
 /**
  * Returns a list of buckets of length n.
- * @param {*} n 
+ * @param {number} n 
  * @returns {any[]}
  */
 function getBuckets(n) {
