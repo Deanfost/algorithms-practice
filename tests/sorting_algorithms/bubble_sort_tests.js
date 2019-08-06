@@ -1,9 +1,9 @@
 const testTools = require("../tools.js");
-const insertionSort = require("../../sorting_algorithms/insertion_sort/main.js");
+const bubbleSort = require("../../sorting_algorithms/bubble_sort");
 
 /**
  * Runs tests defined inside of the function. Returns dictionary containing test results.
- * Note: Insertion Sort is IN-PLACE.
+ * Note: Bubble Sort is IN-PLACE.
  * @returns {number}
  */
 function runTests() {
@@ -13,10 +13,10 @@ function runTests() {
         "test_descending": testTools.list3.slice(), 
         "test_decimals": testTools.list4.slice()
     };
-    
+
     let results = {};
     for (let testKey in tests) {
-        insertionSort(tests[testKey]);
+        bubbleSort(tests[testKey]);
         if (testTools.testAscending(tests[testKey])) {
             results[testKey] = testTools.result.PASS;
             console.log(testKey + ": " + "PASSED ✓");

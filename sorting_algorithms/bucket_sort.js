@@ -1,6 +1,6 @@
 //@ts-check
 
-const insertionSort = require("../insertion_sort/main.js");
+const insertionSort = require("../sorting_algorithms/insertion_sort");
 
 /**
  * Bucket Sort (ascending). Efficient sorting of a uniform distribution. O(n) average time complexity.

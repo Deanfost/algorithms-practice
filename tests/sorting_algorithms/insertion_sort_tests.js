@@ -1,9 +1,9 @@
 const testTools = require("../tools.js");
-const selectionSort = require("../../sorting_algorithms/selection_sort/main.js");
+const insertionSort = require("../../sorting_algorithms/insertion_sort.js");
 
 /**
  * Runs tests defined inside of the function. Returns dictionary containing test results.
- * Note: Selection Sort is IN-PLACE.
+ * Note: Insertion Sort is IN-PLACE.
  * @returns {number}
  */
 function runTests() {
@@ -16,7 +16,7 @@ function runTests() {
     
     let results = {};
     for (let testKey in tests) {
-        selectionSort(tests[testKey]);
+        insertionSort(tests[testKey]);
         if (testTools.testAscending(tests[testKey])) {
             results[testKey] = testTools.result.PASS;
             console.log(testKey + ": " + "PASSED ✓");
