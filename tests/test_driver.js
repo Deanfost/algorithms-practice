@@ -6,9 +6,9 @@
 const testTools = require("./tools.js");
 
 const tests = {
-    "Bubble Sort": require("./algorithms/bubble_sort.js"), 
-    "Insertion Sort": require("./algorithms/insertion_sort.js"), 
-    "Selection Sort": require("./algorithms/selection_sort.js")
+    "Bubble Sort": require("./sorting_algorithms/bubble_sort.js"), 
+    "Insertion Sort": require("./sorting_algorithms/insertion_sort.js"), 
+    "Selection Sort": require("./sorting_algorithms/selection_sort.js.js")
 };
 let results = {};
 
