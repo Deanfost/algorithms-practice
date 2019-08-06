@@ -23,6 +23,7 @@ function runTests() {
         } else {
             results[testKey] = testTools.result.FAIL;
             console.log(testKey + ": " + "FAILED ✗");
+            console.log("--> " + tests[testKey]);
         }
     }
     return results;
