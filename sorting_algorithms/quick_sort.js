@@ -17,7 +17,7 @@ function quickSort(list, start, end) {
     if (start < end) {
         let pivot = partition(list, start, end);
         quickSort(list, start, pivot - 1);
-        quickSort(list, pivot + 1, list.length - 1);
+        quickSort(list, pivot + 1, end);
     }
 }
 
