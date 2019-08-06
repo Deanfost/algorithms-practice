@@ -28,7 +28,7 @@ function testAscending(list) {
 
 /**
  * Calculates the percentage of tests passed.
- * @param {*} results 
+ * @param {{string:{string:boolean}}} results 
  */
 function calcPercentage(results) {
     var testCount = 0;

@@ -5,7 +5,11 @@
 
 const testTools = require("./tools.js");
 
-const tests = {"Bubble Sort": require("./algorithms/bubble_sort.js")}
+const tests = {
+    "Bubble Sort": require("./algorithms/bubble_sort.js"), 
+    "Insertion Sort": require("./algorithms/insertion_sort.js"), 
+    "Selection Sort": require("./algorithms/selection_sort.js")
+};
 let results = {};
 
 // Evaluate tests
@@ -15,10 +19,10 @@ for (var testKey in tests) {
     console.log("");
     results[testKey] = tests[testKey].runTests();
     console.log("");
-    console.log("----------");
 }
+console.log("----------");
 
 // Show overall results
 console.log();
-console.log("Tests passed: " + testTools.calcPercentage(results) + "%");
+console.log("Project grade: " + Math.round(testTools.calcPercentage(results) * 100) / 100 + "%");
 console.log("All tasks finished.");
