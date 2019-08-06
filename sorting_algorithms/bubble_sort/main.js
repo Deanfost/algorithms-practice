@@ -6,12 +6,12 @@
  * @param {number[]} list 
  */
 function bubbleSort(list) {
-    var shouldSort = true;
+    let shouldSort = true;
     while (shouldSort) {
         shouldSort = false;
-        for (var i = 0; i < list.length - 1; i++) {
+        for (let i = 0; i < list.length - 1; i++) {
             if (list[i] > list[i + 1]) {
-                var temp = list[i];
+                let temp = list[i];
                 list[i] = list[i + 1];
                 list[i + 1] = temp;
                 shouldSort = true;

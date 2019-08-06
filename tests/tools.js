@@ -1,9 +1,9 @@
-var list1 = [345, 6, 2, 56, 2, 87, 8, 6, 7, 60]
-var list2 = [1, 2, 3, 4, 5, 7, 8, 10];
-var list3 = list2.slice().reverse();
-var list4 = [.1, .5, .4, .2, .6, .7, .9, .8, .3, 0];
-var list5 = [.1, .2, .3, .4, .5, .6, .7, .8, .9, 1];
-var list6 = list5.slice().reverse();
+const list1 = [345, 6, 2, 56, 2, 87, 8, 6, 7, 60]
+const list2 = [1, 2, 3, 4, 5, 7, 8, 10];
+const list3 = list2.slice().reverse();
+const list4 = [.1, .5, .4, .2, .6, .7, .9, .8, .3, 0];
+const list5 = [.1, .2, .3, .4, .5, .6, .7, .8, .9, 1];
+const list6 = list5.slice().reverse();
 
 const result = {
     PASS: true, 
@@ -16,8 +16,8 @@ const result = {
  * @returns {boolean}
  */
 function testAscending(list) {
-    var prevValue = list[0];
-    for (var i = 1; i < list.length; i++) {
+    let prevValue = list[0];
+    for (let i = 1; i < list.length; i++) {
         if (list[i] < prevValue) {
             return false;
         }
@@ -31,10 +31,10 @@ function testAscending(list) {
  * @param {{string:{string:boolean}}} results 
  */
 function calcPercentage(results) {
-    var testCount = 0;
-    var passCount = 0;
-    for (var resultKey in results) {
-        for (var testKey in results[resultKey]) {
+    let testCount = 0;
+    let passCount = 0;
+    for (let resultKey in results) {
+        for (let testKey in results[resultKey]) {
             testCount++;
             if (results[resultKey][testKey] == result.PASS) {
                 passCount++;

@@ -14,7 +14,7 @@ let results = {};
 
 // Evaluate tests
 console.log("Starting test suite...\n");
-for (var testKey in tests) {
+for (let testKey in tests) {
     console.log("---------- " + testKey + " ----------");
     console.log("");
     results[testKey] = tests[testKey].runTests();

@@ -15,7 +15,7 @@ function sort(list) {
  */
 function quickSort(list, start, end) {
     if (start < end) {
-        var pivot = partition(list, start, end);
+        let pivot = partition(list, start, end);
         quickSort(list, start, pivot - 1);
         quickSort(list, pivot + 1, list.length - 1);
     }
@@ -29,9 +29,9 @@ function quickSort(list, start, end) {
  * @returns {number}
  */
 function partition(list, start, end) {
-    var pivot = list[end];
-    var smallerLeft = start - 1;
-    for (var i = start; i < end; i++) {
+    let pivot = list[end];
+    let smallerLeft = start - 1;
+    for (let i = start; i < end; i++) {
         if (list[i] <= pivot) {
             smallerLeft++;
             swap(list, i, smallerLeft);
@@ -48,7 +48,7 @@ function partition(list, start, end) {
  * @param {number} b Index of element b.
  */
 function swap(list, a, b) {
-    var temp = list[a];
+    let temp = list[a];
     list[a] = list[b];
     list[b] = temp;
 }

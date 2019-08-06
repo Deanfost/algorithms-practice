@@ -11,9 +11,9 @@ function mergeSort(list) {
         return list;
     }
 
-    var middle = list.length / 2;
-    var list1 = mergeSort(list.slice(0, middle));
-    var list2 = mergeSort(list.slice(middle));
+    let middle = list.length / 2;
+    let list1 = mergeSort(list.slice(0, middle));
+    let list2 = mergeSort(list.slice(middle));
     return merge(list1, list2);
 }
 
@@ -24,7 +24,7 @@ function mergeSort(list) {
  * @returns {number[]}
  */
 function merge(list1, list2) {
-    var tempList = [];
+    let tempList = [];
 
     while (list1.length != 0 && list2.length != 0) {
         if (list1[0] < list2[0]) {

@@ -6,11 +6,11 @@
  * @param {number[]} list 
  */
 function selectionSort(list) {
-    for (var i = 0; i < list.length; i++) {
-        var lv = list[i];
-        var lindex = i;
-        var shouldSwap = false;
-        for (var k = i; k < list.length; k++) {
+    for (let i = 0; i < list.length; i++) {
+        let lv = list[i];
+        let lindex = i;
+        let shouldSwap = false;
+        for (let k = i; k < list.length; k++) {
             if (list[k] < lv) {
                 lv = list[k];
                 lindex = k;
