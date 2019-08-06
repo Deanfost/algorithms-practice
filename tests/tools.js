@@ -45,7 +45,7 @@ function testAscending(list) {
 }
 
 /**
- * Returns a new list with random numbers between a certain range of length 100.
+ * Returns a new list with random numbers between a given abs range of length 100.
  * @param {number} absoluteRange
  * @returns {number[]} 
  */

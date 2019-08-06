@@ -9,7 +9,9 @@ const tests = {
     "Bubble Sort": require("./sorting_algorithms/bubble_sort_tests.js"), 
     "Insertion Sort": require("./sorting_algorithms/insertion_sort_tests.js"), 
     "Selection Sort": require("./sorting_algorithms/selection_sort_tests.js"), 
-    "Bucket Sort": require("./sorting_algorithms/bucket_sort_tests.js")
+    "Bucket Sort": require("./sorting_algorithms/bucket_sort_tests.js"), 
+    "Merge Sort": require("./sorting_algorithms/merge_sort_tests.js"), 
+    "Quick Sort": require("./sorting_algorithms/quick_sort_tests.js")
 };
 
 // Evaluate tests
@@ -29,9 +31,9 @@ for (let algorithmKey in results) {
     for (let testKey in currAlgo) {
         let currTest = currAlgo[testKey];
         if (currTest.grade == testTools.Result.FAIL) {
-            console.log(algorithmKey + "/" + testKey + ": ");
-            console.log("Input: " + currTest.input);
-            console.log("Output: " + currTest.output);
+            console.log("FAILED | " + algorithmKey + "/" + testKey + ": ");
+            console.log("-> Input: " + currTest.input);
+            console.log("-> Output: " + currTest.output);
             console.log();
         }
     }

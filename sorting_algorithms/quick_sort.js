@@ -43,16 +43,4 @@ function partition(list, start, end) {
     return smallerLeft + 1;
 }
 
-/**
- * Swaps two elements in a list.
- * @param {number[]} list 
- * @param {number} a Index of element a.
- * @param {number} b Index of element b.
- */
-function swap(list, a, b) {
-    let temp = list[a];
-    list[a] = list[b];
-    list[b] = temp;
-}
-
 module.exports = sort;
