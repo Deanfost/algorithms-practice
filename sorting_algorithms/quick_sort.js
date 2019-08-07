@@ -34,7 +34,6 @@ function partition(list, start, end) {
     for (let i = start; i < end; i++) {
         if (list[i] <= pivot) {
             smallerLeft++;
-            // swap(list, i, smallerLeft);
             list[i] = [list[smallerLeft], list[smallerLeft] = list[i]][0];
         }
     }
