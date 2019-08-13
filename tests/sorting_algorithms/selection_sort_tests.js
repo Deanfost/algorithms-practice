@@ -20,7 +20,7 @@ function runTests() {
         let originalInput = tests[testKey].slice();
         selectionSort(tests[testKey]);
         results[testKey] = {
-            grade: testTools.testResult(testKey, tests[testKey]), 
+            grade: testTools.testSortingResult(testKey, tests[testKey]), 
             input: originalInput, 
             output: tests[testKey]
         };

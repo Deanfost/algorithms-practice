@@ -11,7 +11,8 @@ const tests = {
     "Selection Sort": require("./sorting_algorithms/selection_sort_tests.js"), 
     "Bucket Sort": require("./sorting_algorithms/bucket_sort_tests.js"), 
     "Merge Sort": require("./sorting_algorithms/merge_sort_tests.js"), 
-    "Quick Sort": require("./sorting_algorithms/quick_sort_tests.js")
+    "Quick Sort": require("./sorting_algorithms/quick_sort_tests.js"), 
+    "Graph DFS": require("./trees/depth_first_search_tests.js")
 };
 
 // Evaluate tests

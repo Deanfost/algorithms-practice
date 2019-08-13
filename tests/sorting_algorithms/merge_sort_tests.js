@@ -19,7 +19,7 @@ function runTests() {
     for (let testKey in tests) {
         let output = mergeSort(tests[testKey]);
         results[testKey] = {
-            grade: testTools.testResult(testKey, output), 
+            grade: testTools.testSortingResult(testKey, output), 
             input: tests[testKey], 
             output: output
         };
