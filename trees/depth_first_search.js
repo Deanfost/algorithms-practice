@@ -3,7 +3,7 @@
 const GraphNode = require("./graph.js")
 
 /**
- * Depth-First search of a value in a graph.
+ * Depth-First search of a graph.
  * @param {GraphNode} node 
  * @returns {number[]}
  */

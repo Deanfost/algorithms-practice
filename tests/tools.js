@@ -25,6 +25,7 @@ const uniGraph = new GraphNode(1, [
     ])
 ]);
 const uniGraphDFS = [1, 2, 3, 8, 9, 4, 5, 6, 7];
+const uniGraphBFS = [1, 2, 3, 4, 5, 8, 6, 7, 9];
 
 const squareGraph1 = new GraphNode(1, []);
 const squareGraph2 = new GraphNode(2, []);
@@ -35,6 +36,7 @@ squareGraph2.buddies.push(squareGraph3, squareGraph1);
 squareGraph3.buddies.push(squareGraph4, squareGraph2);
 squareGraph4.buddies.push(squareGraph1, squareGraph3);
 const squareGraphDFS = [1, 2, 3, 4];
+const squareGraphBFS = [1, 2, 4, 3];
 
 const bothGraph0 = new GraphNode(0, []);
 const bothGraph1 = new GraphNode(1, []);
@@ -45,6 +47,7 @@ bothGraph1.buddies.push(bothGraph2);
 bothGraph2.buddies.push(bothGraph0, bothGraph3);
 bothGraph3.buddies.push(bothGraph3);
 const bothGraphDFS = [2, 0, 1, 3];
+const bothGraphBFS = [2, 0, 3, 1];
 
 const smallGraph1 = new GraphNode(0, []);
 const smallGraph2 = new GraphNode(12, []);
@@ -52,6 +55,7 @@ smallGraph1.buddies.push(smallGraph1);
 smallGraph1.buddies.push(smallGraph2);
 smallGraph2.buddies.push(smallGraph1);
 const smallGraphDFS = [0, 12];
+const smallGraphBFS = [0, 12];
 
 const Result = {
     PASS: true, 
@@ -95,13 +99,13 @@ function testAscending(list) {
 /**
  * Tests if the result of a graph search is expected.
  * @param {string} testKey
- * @param {number[]} list1
- * @param {number[]} list2
+ * @param {number[]} traversal
+ * @param {number[]} expected
  * @returns {Result}
  */
-function testGraphResult(testKey, list1, list2) {
+function testGraphResult(testKey, traversal, expected) {
     let result;
-    if (list1.join(",") == list2.join(",")) {
+    if (traversal.join(",") == expected.join(",")) {
         result = Result.PASS;
         console.log(testKey + ": PASSED ✓");
     } else {
@@ -135,18 +139,22 @@ module.exports = {
     Result: Result, getRandomList: getRandomList, 
     uniGraph: {
         graph: uniGraph, 
-        graphDFS: uniGraphDFS
+        graphDFS: uniGraphDFS, 
+        graphBFS: uniGraphBFS
     }, squareGraph: {
         graph: squareGraph1, 
-        graphDFS: squareGraphDFS
+        graphDFS: squareGraphDFS, 
+        graphBFS: squareGraphBFS
     },
     bothGraph: {
         graph: bothGraph2, 
-        graphDFS: bothGraphDFS
+        graphDFS: bothGraphDFS, 
+        graphBFS: bothGraphBFS
     },
     smallGraph: {
         graph: smallGraph1, 
-        graphDFS: smallGraphDFS
+        graphDFS: smallGraphDFS, 
+        graphBFS: smallGraphBFS
     },
     testGraphResult: testGraphResult
 };
