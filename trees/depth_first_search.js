@@ -1,6 +1,6 @@
 //@ts-check
 
-const GraphNode = require("./graph.js")
+const GraphNode = require("./graph.js");
 
 /**
  * Depth-First search of a graph.
@@ -29,4 +29,4 @@ function depthFirstHelper(node, visited) {
     return visited;
 }
 
-module.exports = depthFirstSearch
+module.exports = depthFirstSearch;
